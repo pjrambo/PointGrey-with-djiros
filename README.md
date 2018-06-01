@@ -71,10 +71,13 @@ roscore
   
 rosrun ptgrey_reader camera_list
 ```
-After you change the launch file with the ID number,
+After you change the launch file with the ID number,  
 ```
 roslaunch roslaunch ptgrey_reader YOUR_LAUNCH.launch  
   
 roslaunch djiros djirostrigger.launch
 ```
+If you want to use muti-camera, you need to excute this command first and roslaunch each camera's launch you need:  
+```
+sudo -S sh -c 'echo 2048 > /sys/module/usbcore/parameters/usbfs_memory_mb'  
 ```
